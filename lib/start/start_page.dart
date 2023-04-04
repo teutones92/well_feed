@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:well_feed/blocs/home_bloc.dart';
 import 'package:well_feed/info/information_start/information_start.dart';
+import 'package:well_feed/services/auth_google/auth_google.dart';
 
 class StartPage extends StatelessWidget {
   const StartPage({super.key});
@@ -10,6 +11,7 @@ class StartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final HomeBloc homeBloc = HomeBloc();
+    final AuthGoogle authGoogle = AuthGoogle();
     return Scaffold(
       backgroundColor: Colors.green,
       body: Center(
@@ -36,7 +38,8 @@ class StartPage extends StatelessWidget {
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white),
-                      onPressed: () => homeBloc.toHomePage(context),
+                      onPressed: () =>
+                          authGoogle.signInWithGoogle(homeBloc, context),
                       child: Row(
                         // mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -55,7 +58,7 @@ class StartPage extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                  onPressed: () => homeBloc.toHomePage(context),
+                  onPressed: () => homeBloc.toHomePage(context, userData: null),
                   child: const Text(
                     'Continue as a guess',
                     style: TextStyle(color: Colors.white),

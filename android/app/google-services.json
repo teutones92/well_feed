@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "140778268935",
+    "project_id": "well-feed",
+    "storage_bucket": "well-feed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140778268935:android:f897dfe7f4465cf2367da2",
+        "android_client_info": {
+          "package_name": "com.example.well_feed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140778268935-72b5hr6hfeduqthldo9d76jiase2du8i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.well_feed",
+            "certificate_hash": "fff001e59885ff6722c82ecff718ef88f3172e7f"
+          }
+        },
+        {
+          "client_id": "140778268935-qdruourhf8qs69bd63k2b98g0647dokh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.well_feed",
+            "certificate_hash": "49ae8e42938326223ae0fea1ef41ab18d53dd73a"
+          }
+        },
+        {
+          "client_id": "140778268935-n5o6ocqafor7i82k766lg9h0p75craum.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIA-aDkdwWFJxXGEmfSvNQ9SMZ1t47Euw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "140778268935-d56qr9hgfug99b25sbc0mg5kg6d471di.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "140778268935-npg7kff5477t60u7odu99qsfnm8b2vhj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.wellfeed"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -77,11 +77,6 @@ class _HomePageState extends State<HomePage> {
             ),
             ListView(
               children: [
-                ElevatedButton(
-                    onPressed: () {
-                      widget.homeBloc.fetchYogaData();
-                    },
-                    child: const Text('data')),
                 Stack(
                   children: [
                     customAnimationPosition(
@@ -116,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                                 width: size.width / 2,
                                 child: Text(
                                   style: TextStyle(
-                                    fontSize: size.width / 12.5,
+                                    fontSize: size.width / 12,
                                     fontWeight: FontWeight.bold,
                                     shadows: [
                                       Shadow(
@@ -153,13 +148,21 @@ class _HomePageState extends State<HomePage> {
                                 child: Padding(
                                   padding: const EdgeInsets.all(4.0),
                                   child: ListTile(
+                                    onTap: () => widget.homeBloc
+                                        .goToSecondPage(context, index),
                                     leading: Image.asset(
                                       item.imagePath,
                                       fit: BoxFit.cover,
                                       width: 60,
                                       height: 80,
                                     ),
-                                    title: Text(item.title),
+                                    title: Text(
+                                      item.title,
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black,
+                                          fontSize: 20),
+                                    ),
                                     subtitle: Text(
                                       item.content,
                                       // softWrap: true,

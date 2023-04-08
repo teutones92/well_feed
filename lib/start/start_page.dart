@@ -5,13 +5,14 @@ import 'package:well_feed/info/information_start/information_start.dart';
 import 'package:well_feed/services/auth_google/auth_google.dart';
 
 class StartPage extends StatelessWidget {
-  const StartPage({super.key});
+  const StartPage(
+      {super.key, required this.homeBloc, required this.authGoogle});
+  final HomeBloc homeBloc;
+  final AuthGoogle authGoogle;
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final HomeBloc homeBloc = HomeBloc();
-    final AuthGoogle authGoogle = AuthGoogle();
     return Scaffold(
       backgroundColor: Colors.green,
       body: Center(
@@ -57,13 +58,13 @@ class StartPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                TextButton(
-                  onPressed: () => homeBloc.toHomePage(context, userData: null),
-                  child: const Text(
-                    'Continue as a guess',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )
+                // TextButton(
+                //   onPressed: () => homeBloc.toHomePage(context, userData: null),
+                //   child: const Text(
+                //     'Continue as a guess',
+                //     style: TextStyle(color: Colors.white),
+                //   ),
+                // )
               ],
             ),
           ],
